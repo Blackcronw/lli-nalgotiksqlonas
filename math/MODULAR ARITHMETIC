@@ -48,3 +48,14 @@ lli inv(lli a){
 lli division(lli a, lli b){
     return mul(a, inv(b));
 }
+
+int gcd(int a, int b){
+    if(b == 0) return a;
+    return gcd(b,a%b);
+}
+
+lli lcm(lli a, lli b){
+    lli gd = gcd(a,b);
+    a /= gd;
+    a *= b;
+    return a;
